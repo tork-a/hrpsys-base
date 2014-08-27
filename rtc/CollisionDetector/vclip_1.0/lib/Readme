@@ -1,4 +1,0 @@
-V-Clip libraries.  Applications should link to these libraries.
-
-libvclip.a*	V-Clip library without Inventor interface
-libvclipi.a*	V-Clip library with Inventor interface

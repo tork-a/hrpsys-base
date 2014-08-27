@@ -1,4 +1,0 @@
-model: file://@CMAKE_INSTALL_PREFIX@/share/hrpsys/samples/Sample6dofRobot/Sample6dofRobot.wrl
-exec_cxt.periodic.type: hrpExecutionContext
-exec_cxt.periodic.rate: 200
-

@@ -1,0 +1,6 @@
+add_subdirectory(ProjectGenerator)
+if(USE_HRPSYSUTIL)
+  add_subdirectory(simulator)
+  add_subdirectory(viewer)
+  add_subdirectory(monitor)
+endif()

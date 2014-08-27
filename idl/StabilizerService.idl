@@ -1,0 +1,69 @@
+/**
+ * @file StabilizerService.idl
+ * @brief Services for the robot hardware interface
+ */
+module OpenHRP
+{
+  interface StabilizerService
+  {
+    typedef double DblArray2[2];
+
+    // Stabilizer Parameters
+    struct stParam {
+      // for TPCC
+      DblArray2 k_tpcc_p;
+      DblArray2 k_tpcc_x;
+      DblArray2 k_brot_p;
+      DblArray2 k_brot_tc;
+      // for RUNST
+      DblArray2 k_run_b;
+      DblArray2 d_run_b;
+      DblArray2 tdfke;
+      DblArray2 tdftc;
+      double k_run_x;
+      double k_run_y;
+      double d_run_x;
+      double d_run_y;
+      // for EEFM ST
+      DblArray2 eefm_k1;
+      DblArray2 eefm_k2;
+      DblArray2 eefm_k3;
+      DblArray2 eefm_zmp_delay_time_const;
+      DblArray2 eefm_ref_zmp_aux;
+      double eefm_rot_damping_gain;
+      double eefm_rot_time_const;
+      double eefm_pos_damping_gain;
+      double eefm_pos_time_const;
+    };
+
+    /**
+     * @brief Get Stabilizer parameters.
+     * @param i_param is output parameters
+     * @return true if set successfully, false otherwise
+     */
+    void getParameter(out stParam i_param);
+
+    /**
+     * @brief Set Stabilizer parameters.
+     * @param i_param is input parameters
+     * @return true if set successfully, false otherwise
+     */
+    void setParameter(in stParam i_param);
+
+    /**
+     * @brief Start Stabilizer mode.
+     * @param
+     * @return
+     */
+    void startStabilizer();
+
+    /**
+     * @brief Sop Stabilizer mode.
+     * @param
+     * @return
+     */
+    void stopStabilizer();
+    boolean dummy();
+  };
+};
+

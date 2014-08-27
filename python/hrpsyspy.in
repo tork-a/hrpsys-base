@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export PYTHONPATH=@python_dist_pkg_dir@:$PYTHONPATH
+
+ipython $@
+
+

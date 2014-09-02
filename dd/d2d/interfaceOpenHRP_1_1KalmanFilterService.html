@@ -60,6 +60,7 @@
 </div>
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">OpenHRP::KalmanFilterService Interface Reference</div>  </div>
@@ -70,41 +71,66 @@
 
 <p><a href="../../d2/d73/interfaceOpenHRP_1_1KalmanFilterService-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d71/structOpenHRP_1_1KalmanFilterService_1_1KalmanFilterParam.html">KalmanFilterParam</a></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/interfaceOpenHRP_1_1KalmanFilterService.html#a495877b6e785c280309876c752918864">SetKalmanFilterParam</a> (in double Q_angle, in double Q_rate, in double R_angle)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/interfaceOpenHRP_1_1KalmanFilterService.html#a4c189331aca40101853508803720333e">setKalmanFilterParam</a> (in <a class="el" href="../../d2/d71/structOpenHRP_1_1KalmanFilterService_1_1KalmanFilterParam.html">KalmanFilterParam</a> i_param)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set KalmanFilter parameters.  <a href="#a4c189331aca40101853508803720333e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d2d/interfaceOpenHRP_1_1KalmanFilterService.html#a4bb731e9ac37af1961ceec92461dd449">getKalmanFilterParam</a> (out <a class="el" href="../../d2/d71/structOpenHRP_1_1KalmanFilterService_1_1KalmanFilterParam.html">KalmanFilterParam</a> i_param)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get KalmanFilter parameters.  <a href="#a4bb731e9ac37af1961ceec92461dd449"></a><br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a495877b6e785c280309876c752918864"></a><!-- doxytag: member="OpenHRP::KalmanFilterService::SetKalmanFilterParam" ref="a495877b6e785c280309876c752918864" args="(in double Q_angle, in double Q_rate, in double R_angle)" -->
+<a class="anchor" id="a4bb731e9ac37af1961ceec92461dd449"></a><!-- doxytag: member="OpenHRP::KalmanFilterService::getKalmanFilterParam" ref="a4bb731e9ac37af1961ceec92461dd449" args="(out KalmanFilterParam i_param)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean <a class="el" href="../../dd/d2d/interfaceOpenHRP_1_1KalmanFilterService.html#a495877b6e785c280309876c752918864">OpenHRP::KalmanFilterService::SetKalmanFilterParam</a> </td>
+          <td class="memname">boolean <a class="el" href="../../dd/d2d/interfaceOpenHRP_1_1KalmanFilterService.html#a4bb731e9ac37af1961ceec92461dd449">OpenHRP::KalmanFilterService::getKalmanFilterParam</a> </td>
           <td>(</td>
-          <td class="paramtype">in double&#160;</td>
-          <td class="paramname"><em>Q_angle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">out <a class="el" href="../../d2/d71/structOpenHRP_1_1KalmanFilterService_1_1KalmanFilterParam.html">KalmanFilterParam</a>&#160;</td>
+          <td class="paramname"><em>i_param</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">in double&#160;</td>
-          <td class="paramname"><em>Q_rate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in double&#160;</td>
-          <td class="paramname"><em>R_angle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get KalmanFilter parameters. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i_param</td><td>is input parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if set successfully, false otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c189331aca40101853508803720333e"></a><!-- doxytag: member="OpenHRP::KalmanFilterService::setKalmanFilterParam" ref="a4c189331aca40101853508803720333e" args="(in KalmanFilterParam i_param)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean <a class="el" href="../../dd/d2d/interfaceOpenHRP_1_1KalmanFilterService.html#a4c189331aca40101853508803720333e">OpenHRP::KalmanFilterService::setKalmanFilterParam</a> </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="../../d2/d71/structOpenHRP_1_1KalmanFilterService_1_1KalmanFilterParam.html">KalmanFilterParam</a>&#160;</td>
+          <td class="paramname"><em>i_param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set KalmanFilter parameters. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i_param</td><td>is input parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if set successfully, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -115,7 +141,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 1 2014 22:17:57 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 2 2014 22:45:58 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -185,6 +185,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off servos.  <a href="#aea42f3b3e5b42d1de1fa0ac74fa040d3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a38fa6df60028ac7e3ab0ba4e91596b1b">checkEncoders</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the encoder checking sequence for specified joints, run goActual and turn on servos.  <a href="#a38fa6df60028ac7e3ab0ba4e91596b1b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a1c4d194e18b1e562437a8ff32f00c344">removeForceSensorOffset</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">remove force sensor offset  <a href="#a1c4d194e18b1e562437a8ff32f00c344"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#aaa5eac878da20d174d8e171d39f1f102">init</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls init from its superclass, which tries to connect RTCManager, looks for ModelLoader, and starts necessary RTC components.  <a href="#aaa5eac878da20d174d8e171d39f1f102"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#aea38aea442c7f0ae757ef2e6274362b5">__init__</a></td></tr>
@@ -1632,6 +1634,25 @@ Static Public Attributes</h2></td></tr>
 <p>#TODO: Catch AttributeError that occurs when RobotHardware not found. # Typically with simulator, erro msg might look like this; # 'NoneType' object has no attribute 'readDigitaloutput'</p>
 <dl class="author"><dt><b>Author:</b></dt><dd>Hajime Saito (@emijah) </dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>list of int: List of the values in digital input register. Range: 0 or 1. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c4d194e18b1e562437a8ff32f00c344"></a><!-- doxytag: member="python::hrpsys_config::HrpsysConfigurator::removeForceSensorOffset" ref="a1c4d194e18b1e562437a8ff32f00c344" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a1c4d194e18b1e562437a8ff32f00c344">python.hrpsys_config.HrpsysConfigurator.removeForceSensorOffset</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>remove force sensor offset </p>
 
 </div>
 </div>
@@ -3245,7 +3266,7 @@ hironx' designated issue tracker.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 5 2014 22:17:50 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 5 2014 22:54:49 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

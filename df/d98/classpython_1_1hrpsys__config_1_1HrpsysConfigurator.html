@@ -851,13 +851,15 @@ Static Public Attributes</h2></td></tr>
        0.0,
        0.0,
        1.0]
-</pre></div> <dl class="params"><dt><b>Parameters:</b></dt><dd>
+</pre></div><p>lname: str </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: Rotational matrix and the position of the given joint in 1-dimensional list, that is: <div class="fragment"><pre class="fragment">
+<dl class="return"><dt><b>Returns:</b></dt><dd>: Rotational matrix and the position of the given joint in 1-dimensional list, that is: <div class="fragment"><pre class="fragment">
  [a11, a12, a13, x,
   a21, a22, a23, y,
   a31, a32, a33, z,
@@ -907,13 +909,15 @@ Static Public Attributes</h2></td></tr>
 <div class="fragment"><pre class="fragment">
     robot.getCurrentPosition('LARM_JOINT5')
     [0.325, 0.182, 0.074]
-</pre></div><dl class="params"><dt><b>Parameters:</b></dt><dd>
+</pre></div><p>lname: str </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: List of x, y, z positions about the specified joint. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>: List of x, y, z positions about the specified joint. </dd></dl>
 
 <p>References <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#adb853615f7016f95dce85308e6b6b61e">python.hrpsys_config.HrpsysConfigurator.getCurrentPose()</a>, <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#ae4c681ad3e419d4d6c7410f352bb4fe0">python.hrpsys_config.HrpsysConfigurator.getCurrentPosition()</a>, and <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a5447b10b79e7eb78539857dff86f3d65">python.hrpsys_config.HrpsysConfigurator.Groups</a>.</p>
 
@@ -954,13 +958,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the current physical rotation of the specified joint. </p>
 <p>cf. getReferenceRotation that returns commanded value.</p>
+<p>lname: str </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: Rotational matrix of the given joint in 2-dimensional list, that is: <div class="fragment"><pre class="fragment">
+<dl class="return"><dt><b>Returns:</b></dt><dd>: Rotational matrix of the given joint in 2-dimensional list, that is: <div class="fragment"><pre class="fragment">
  [[a11, a12, a13],
   [a21, a22, a23],
   [a31, a32, a33]]
@@ -1005,13 +1011,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the current physical rotation in RPY of the specified joint. </p>
 <p>cf. getReferenceRPY that returns commanded value.</p>
+<p>lname: str </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: List of orientation in rpy form about the specified joint. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>: List of orientation in rpy form about the specified joint. </dd></dl>
 
 <p>References <a class="el" href="../../da/ddc/namespacepython_1_1hrpsys__config.html#a79101d20c4f90b1484d2613edf4fa12c">python::hrpsys_config.euler_from_matrix()</a>, <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a1c1ace4023a299e10c3cc34030d6faa8">python.hrpsys_config.HrpsysConfigurator.getCurrentRotation()</a>, <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#ac8f538c5650752e2906e3159a68b01a4">python.hrpsys_config.HrpsysConfigurator.getCurrentRPY()</a>, and <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a5447b10b79e7eb78539857dff86f3d65">python.hrpsys_config.HrpsysConfigurator.Groups</a>.</p>
 
@@ -1097,13 +1105,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the current commanded pose of the specified joint. </p>
 <p>cf. getCurrentPose that returns physical pose.</p>
+<p>lname: str </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: Rotational matrix and the position of the given joint in 1-dimensional list, that is: <div class="fragment"><pre class="fragment">
+<dl class="return"><dt><b>Returns:</b></dt><dd>: Rotational matrix and the position of the given joint in 1-dimensional list, that is: <div class="fragment"><pre class="fragment">
  [a11, a12, a13, x,
   a21, a22, a23, y,
   a31, a32, a33, z,
@@ -1149,13 +1159,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the current commanded position of the specified joint. </p>
 <p>cf. getCurrentPosition that returns physical value.</p>
+<p>lname: str </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: List of angles (degree) of all joints, in the order defined in the member variable 'Groups' (eg. chest, head1, head2, ..). </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>: List of angles (degree) of all joints, in the order defined in the member variable 'Groups' (eg. chest, head1, head2, ..). </dd></dl>
 
 <p>References <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#afe8939c17d07b76f7aea4a0943be88da">python.hrpsys_config.HrpsysConfigurator.getReferencePose()</a>, <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#ae5dccd9923276503ab21323b919405cc">python.hrpsys_config.HrpsysConfigurator.getReferencePosition()</a>, and <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a5447b10b79e7eb78539857dff86f3d65">python.hrpsys_config.HrpsysConfigurator.Groups</a>.</p>
 
@@ -1196,13 +1208,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the current commanded rotation of the specified joint. </p>
 <p>cf. getCurrentRotation that returns physical value.</p>
+<p>lname: str </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: Rotational matrix of the given joint in 2-dimensional list, that is: <div class="fragment"><pre class="fragment">
+<dl class="return"><dt><b>Returns:</b></dt><dd>: Rotational matrix of the given joint in 2-dimensional list, that is: <div class="fragment"><pre class="fragment">
  [[a11, a12, a13],
   [a21, a22, a23],
   [a31, a32, a33]]
@@ -1247,13 +1261,15 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the current commanded rotation in RPY of the specified joint. </p>
 <p>cf. getCurrentRPY that returns physical value.</p>
+<p>lname: str </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lname</td><td>str: Name of the link. </td></tr>
+    <tr><td class="paramname">lname,:</td><td>Name of the link. </td></tr>
+    <tr><td class="paramname">frame_name</td><td>str: set reference frame name (from 315.2.5) : list of float </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>list of float: List of orientation in rpy form about the specified joint. </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>: List of orientation in rpy form about the specified joint. </dd></dl>
 
 <p>References <a class="el" href="../../da/ddc/namespacepython_1_1hrpsys__config.html#a79101d20c4f90b1484d2613edf4fa12c">python::hrpsys_config.euler_from_matrix()</a>, <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#aa03ac3cfcd8bc05aa35ca9b72f8583d7">python.hrpsys_config.HrpsysConfigurator.getReferenceRotation()</a>, <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#abc57d31eb67be2e63d6a9f1f4f01f6be">python.hrpsys_config.HrpsysConfigurator.getReferenceRPY()</a>, and <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a5447b10b79e7eb78539857dff86f3d65">python.hrpsys_config.HrpsysConfigurator.Groups</a>.</p>
 
@@ -3266,7 +3282,7 @@ hironx' designated issue tracker.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 6 2014 10:55:39 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 6 2014 12:50:43 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -187,6 +187,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the encoder checking sequence for specified joints, run goActual and turn on servos.  <a href="#a38fa6df60028ac7e3ab0ba4e91596b1b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a1c4d194e18b1e562437a8ff32f00c344">removeForceSensorOffset</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">remove force sensor offset  <a href="#a1c4d194e18b1e562437a8ff32f00c344"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a058380ea61f117e5acc457255d1dcd0b">playPattern</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Play motion pattern using a given trajectory that is represented by a list of joint angles, rpy, zmp and time.  <a href="#a058380ea61f117e5acc457255d1dcd0b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a9033a252c2115ae66c21b5ff0bb585c0">playPatternOfGroup</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Play motion pattern using a given trajectory that is represented by a list of joint angles.  <a href="#a9033a252c2115ae66c21b5ff0bb585c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#aaa5eac878da20d174d8e171d39f1f102">init</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls init from its superclass, which tries to connect RTCManager, looks for ModelLoader, and starts necessary RTC components.  <a href="#aaa5eac878da20d174d8e171d39f1f102"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#aea38aea442c7f0ae757ef2e6274362b5">__init__</a></td></tr>
@@ -1601,6 +1605,119 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>: List of 2 oct(string) values. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a058380ea61f117e5acc457255d1dcd0b"></a><!-- doxytag: member="python::hrpsys_config::HrpsysConfigurator::playPattern" ref="a058380ea61f117e5acc457255d1dcd0b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a058380ea61f117e5acc457255d1dcd0b">python.hrpsys_config.HrpsysConfigurator.playPattern</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>jointangles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rpy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>zmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Play motion pattern using a given trajectory that is represented by a list of joint angles, rpy, zmp and time. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jointangles</td><td>list of list of float: The whole list represents a trajectory. Each element of the 1st degree in the list consists of the joint angles. </td></tr>
+    <tr><td class="paramname">rpy</td><td>list of float: Orientation in rpy. </td></tr>
+    <tr><td class="paramname">zmp</td><td>list of float: TODO: description </td></tr>
+    <tr><td class="paramname">tm</td><td>float: Time to complete the task. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool: </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9033a252c2115ae66c21b5ff0bb585c0"></a><!-- doxytag: member="python::hrpsys_config::HrpsysConfigurator::playPatternOfGroup" ref="a9033a252c2115ae66c21b5ff0bb585c0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="../../df/d98/classpython_1_1hrpsys__config_1_1HrpsysConfigurator.html#a9033a252c2115ae66c21b5ff0bb585c0">python.hrpsys_config.HrpsysConfigurator.playPatternOfGroup</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>gname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>jointangles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Play motion pattern using a given trajectory that is represented by a list of joint angles. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gname</td><td>str: Name of the joint group. </td></tr>
+    <tr><td class="paramname">jointangles</td><td>list of list of float: The whole list represents a trajectory. Each element of the 1st degree in the list consists of the joint angles. To illustrate:</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>[[a0-0, a0-1,...,a0-n], # a)ngle. 1st path in trajectory [a1-0, a1-1,...,a1-n], # 2nd path in the trajectory. : [am-0, am-1,...,am-n]] # mth path in the trajectory </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tm</td><td>float: Time to complete the task. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool: </dd></dl>
 
 </div>
 </div>
@@ -3282,7 +3399,7 @@ hironx' designated issue tracker.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 6 2014 12:50:43 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 9 2014 22:19:18 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

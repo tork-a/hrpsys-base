@@ -64,8 +64,26 @@
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/rtc_2DataLogger_2CMakeLists_8txt.html#a0e728d8345cedc7ee58b4cd5f7bd32f2">set</a> (comp_sources DataLogger.cpp DataLoggerService_impl.cpp) <a class="el" href="../../da/de5/idl_2CMakeLists_8txt.html#ad00cebb7acaba72a40cade1519f00dbc">set</a>(libs hrpsysBaseStub) <a class="el" href="../../d2/dae/rtc_2SORFilter_2CMakeLists_8txt.html#ac83e5ea2dd88a4454b6478d9f65534f4">add_library</a>(DataLogger SHARED $</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/rtc_2DataLogger_2CMakeLists_8txt.html#ad0ea449690d9b6e7c2949ea42b84b928">target_link_libraries</a> (DataLogger ${libs}) <a class="el" href="../../d4/d91/rtc_2VirtualCamera_2CMakeLists_8txt.html#a20c78ecfb57ef67db4183adf455e6ba1">set_target_properties</a>(DataLogger PROPERTIES PREFIX&quot;&quot;) <a class="el" href="../../d7/d0f/rtc_2AutoBalancer_2CMakeLists_8txt.html#aebf7a54a748352a8a9e38684ac4ac134">add_executable</a>(DataLoggerComp DataLoggerComp.cpp $</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/rtc_2DataLogger_2CMakeLists_8txt.html#a5a93d13dcc21e575f81a85952602b6bf">link_directories</a> (${PCL_LIBRARY_DIRS}) <a class="el" href="../../d7/d0f/rtc_2AutoBalancer_2CMakeLists_8txt.html#aebf7a54a748352a8a9e38684ac4ac134">add_executable</a>(PointCloudLogViewer PointCloudLogViewer) <a class="el" href="../../da/d36/rtc_2WavPlayer_2CMakeLists_8txt.html#a74dfd86b7486019d8e4f1d6a9a419b42">target_link_libraries</a>(PointCloudLogViewer $</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/def/rtc_2DataLogger_2CMakeLists_8txt.html#aad394e384ed111ca103c62b3c91b0e48">set</a> (target DataLogger DataLoggerComp PointCloudLogViewer) else() <a class="el" href="../../da/de5/idl_2CMakeLists_8txt.html#ad00cebb7acaba72a40cade1519f00dbc">set</a>(target DataLogger DataLoggerComp) endif() install(TARGETS $</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a5a93d13dcc21e575f81a85952602b6bf"></a><!-- doxytag: member="rtc/DataLogger/CMakeLists.txt::link_directories" ref="a5a93d13dcc21e575f81a85952602b6bf" args="(${PCL_LIBRARY_DIRS}) add_executable(PointCloudLogViewer PointCloudLogViewer) target_link_libraries(PointCloudLogViewer $" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/def/rtc_2DataLogger_2CMakeLists_8txt.html#a5a93d13dcc21e575f81a85952602b6bf">link_directories</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0e728d8345cedc7ee58b4cd5f7bd32f2"></a><!-- doxytag: member="rtc/DataLogger/CMakeLists.txt::set" ref="a0e728d8345cedc7ee58b4cd5f7bd32f2" args="(comp_sources DataLogger.cpp DataLoggerService_impl.cpp) set(libs hrpsysBaseStub) add_library(DataLogger SHARED $" -->
 <div class="memitem">
 <div class="memproto">
@@ -75,6 +93,23 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">comp_sources DataLogger.cpp DataLoggerService_impl.&#160;</td>
           <td class="paramname"><em>cpp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aad394e384ed111ca103c62b3c91b0e48"></a><!-- doxytag: member="rtc/DataLogger/CMakeLists.txt::set" ref="aad394e384ed111ca103c62b3c91b0e48" args="(target DataLogger DataLoggerComp PointCloudLogViewer) else() set(target DataLogger DataLoggerComp) endif() install(TARGETS $" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/de5/idl_2CMakeLists_8txt.html#ad00cebb7acaba72a40cade1519f00dbc">set</a> </td>
+          <td>(</td>
+          <td class="paramtype">target DataLogger DataLoggerComp&#160;</td>
+          <td class="paramname"><em>PointCloudLogViewer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -103,7 +138,7 @@ Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 25 2014 03:36:09 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 25 2014 05:40:52 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

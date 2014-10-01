@@ -50,6 +50,12 @@
 <div class="textblock"><h2><a class="anchor" id="introduction"></a>
 Overview</h2>
 <p>This component is maintain full-body balance based on sensor feedback.</p>
+<h3><a class="anchor" id="feature"></a>
+Feature</h3>
+<p>This component modifies input joint angles to control COG, ZMP, and so on. This component receives reference joint angles from "qRef" inport. Then it solves Inverse Kinematics (or something) based on sensor feedback, obtains jonint angles, and outputs the joint angles as "q" outport.</p>
+<h3><a class="anchor" id="mode"></a>
+Mode</h3>
+<p>This component has modes and behaves as Finite State Machine. By default, this component is idle mode ("MODE_IDLE"), in which it do not modify input joint angles. When <a class="el" href="../../d5/dc8/interfaceOpenHRP_1_1StabilizerService.html#ab2dc22c54f8d1971b141b6fb25191329" title="Start Stabilizer mode.">OpenHRP::StabilizerService::startStabilizer()</a> are called in idle mode, it switches to controlling mode ("MODE_ST"), in which it modifies joint angles. When <a class="el" href="../../d5/dc8/interfaceOpenHRP_1_1StabilizerService.html#afa6244f27acf1d6379ea15957841f0ba" title="Sop Stabilizer mode.">OpenHRP::StabilizerService::stopStabilizer()</a> are called in controlling mode, it switches to idle mode. When this component is controlling mode and the robot is put off to the air, it switches to air mode ("MODE_AIR"), which is similar to idle mode. When this component was air mode and the robot is put on the ground, it switches to controlling mode.</p>
 <table class="doxtable">
 <tr>
 <th>implementation_id</th><td>Stabilizer </td></tr>
@@ -68,7 +74,7 @@ Input Ports</h3>
 <tr>
 <td>qRef</td><td>RTC::TimedDoubleSeq</td><td>[rad]</td><td>Reference joint angles </td></tr>
 <tr>
-<td>rpy</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Actual attitude sensor's RPY angle  </td></tr>
+<td>rpy</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Actual attitude sensor's Roll-Pitch-Yaw angle  </td></tr>
 <tr>
 <td>forceL</td><td>RTC::TimedDoubleSeq</td><td>[N],[Nm]</td><td>6D wrench vector for actual force and moment for left leg </td></tr>
 <tr>
@@ -78,7 +84,7 @@ Input Ports</h3>
 <tr>
 <td>basePosIn</td><td>RTC::TimedPoint3D</td><td>[m]</td><td>Reference base position </td></tr>
 <tr>
-<td>baseRpyIn</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Reference base orientation (RPY) </td></tr>
+<td>baseRpyIn</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Reference base orientation (Roll-Pitch-Yaw) </td></tr>
 <tr>
 <td>contactStates</td><td>RTC::TimedBooleanSeq</td><td>NA</td><td>Reference end-effector contact states (True=contact, False=no-contact) </td></tr>
 <tr>
@@ -122,7 +128,7 @@ Configuration File</h2>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 1 2014 04:59:49 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 1 2014 06:09:27 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

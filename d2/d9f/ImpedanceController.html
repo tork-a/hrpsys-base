@@ -49,7 +49,13 @@
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="introduction"></a>
 Overview</h2>
-<p>This component is cartesian impedance control.</p>
+<p>This component is cartesian impedance control, in which it modifies end-effector's position or orientation based on force/torque.</p>
+<h3><a class="anchor" id="feature"></a>
+Feature</h3>
+<p>This component receives reference joint angles from "qRef" inport and actual force/torque values. Then it calculates reference end-effector position and orientation and modifies end-effector's position/orientation based on force/torque. It solves Inverse Kinematics based on modified end-effector position/orientation, obtains jonint angles, and outputs the joint angles as "q" outport.</p>
+<h3><a class="anchor" id="mode"></a>
+Mode</h3>
+<p>This component has modes by JointGroup such as ``rarm`` and ``rleg``. By default, this component is idle mode for all JointGroup, in which it do not modify input joint angles. When <a class="el" href="../../d9/d8b/interfaceOpenHRP_1_1ImpedanceControllerService.html#aaa8434ec91f991df0f9b0162be369be8" title="set impedance parameters.">OpenHRP::ImpedanceControllerService::setImpedanceControllerParam()</a> are called in idle mode, it switches to controlling mode, in which it modifies input joint angles. When <a class="el" href="../../d9/d8b/interfaceOpenHRP_1_1ImpedanceControllerService.html#a70035a63f93984e6960f7b27ae92107d" title="remove impedance parameters.">OpenHRP::ImpedanceControllerService::deleteImpedanceController()</a> are called in controlling mode, it switches to idle mode.</p>
 <table class="doxtable">
 <tr>
 <th>implementation_id</th><td>ImpedanceController </td></tr>
@@ -68,9 +74,11 @@ Input Ports</h3>
 <tr>
 <td>qRef</td><td>RTC::TimedDoubleSeq</td><td>[rad]</td><td>Reference joint angles </td></tr>
 <tr>
-<td>rpy</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Actual attitude sensor's RPY angle  </td></tr>
+<td>rpy</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Actual attitude sensor's Roll-Pitch-Yaw angle  </td></tr>
 <tr>
-<td>rpyRef</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Reference attitude sensor's RPY angle  </td></tr>
+<td>rpyRef</td><td>RTC::TimedOrientation3D</td><td>[rad]</td><td>Reference attitude sensor's Roll-Pitch-Yaw angle  </td></tr>
+<tr>
+<td>name of force/torque sensor defined in a VRML model, such as "rhsensor"</td><td>RTC::TimedDoubleSeq</td><td>[N],[Nm]</td><td>Actual force/torque in the sensor frame </td></tr>
 </table>
 <h3><a class="anchor" id="outports"></a>
 Output Ports</h3>
@@ -108,7 +116,7 @@ Configuration File</h2>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 1 2014 04:59:49 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 1 2014 06:09:27 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

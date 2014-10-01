@@ -49,7 +49,20 @@
 <div class="contents">
 <div class="textblock"><h2><a class="anchor" id="introduction"></a>
 Overview</h2>
-<p>This component is generate walking pattern and control Center Of Gravity for legged robots without sensor feedback.</p>
+<p>This component is generate walking pattern and control Center Of Gravity (COG) for legged robots without sensor feedback.</p>
+<h3><a class="anchor" id="cog"></a>
+COG control</h3>
+<p>This component modifies input joint angles to track reference COG position. This component receives reference joint angles from "qRef" inport. Then it solves Inverse Kinematics (or something) to track reference COG position, obtains jonint angles, and outputs the joint angles as "q" outport.</p>
+<p>In this calculation, this component tracks reference XY COG position, reference Z base position, and reference base orientation.</p>
+<h3><a class="anchor" id="mode"></a>
+Mode</h3>
+<p>This component has modes and behaves as Finite State Machine. By default, this component is idle mode ("MODE_IDLE"), in which it do not modify input joint angles. When <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a64c4d4663874a9b36c75ca46c6ba3994" title="Start AutoBalancer mode in which the robot controls the COM.">OpenHRP::AutoBalancerService::startAutoBalancer()</a> are called in IDLE mode, it switches to controlling mode ("MODE_ABC"), in which it modifies joint angles. When <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#ad36bf04c5a607f39fb58fae1922c222c" title="Stop AutoBalancer mode.">OpenHRP::AutoBalancerService::stopAutoBalancer()</a> are called in controlling mode, it switches to idle mode.</p>
+<h3><a class="anchor" id="eef"></a>
+Controlled end-effectors</h3>
+<p>User can specify which end-effector is controlled by the argument of <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a64c4d4663874a9b36c75ca46c6ba3994" title="Start AutoBalancer mode in which the robot controls the COM.">OpenHRP::AutoBalancerService::startAutoBalancer()</a>. When <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a64c4d4663874a9b36c75ca46c6ba3994" title="Start AutoBalancer mode in which the robot controls the COM.">OpenHRP::AutoBalancerService::startAutoBalancer()</a> are called with ["rleg", "lleg"], it controlles reference end-effector position and orientation for "rleg" and "lleg". When <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a64c4d4663874a9b36c75ca46c6ba3994" title="Start AutoBalancer mode in which the robot controls the COM.">OpenHRP::AutoBalancerService::startAutoBalancer()</a> are called with ["rleg", "lleg", "rarm", "larm"], it controlles reference end-effector for "rleg", "lleg", "rarm", "larm". In this case, the robot seems to keep both feet and hands position and orientation.</p>
+<h3><a class="anchor" id="wpg"></a>
+Walking pattern generation</h3>
+<p>This component has also the feature as walking pattern generation, named as GaitGenerator. When <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#ab1228769703a5a8403f80f34c4f96010" title="Walk to the goal position and orientation.">OpenHRP::AutoBalancerService::goPos()</a>, <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#ad76d7a7c8aff5c0fa95c16b267929bcd" title="Walk at the desired velocity.">OpenHRP::AutoBalancerService::goVelocity()</a>, <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a69a486e3a60bfdeef6c53041f5d251a6" title="Set footsteps.">OpenHRP::AutoBalancerService::setFootSteps()</a> are called, this component starts to use reference XY COG position from "GaitGenerator". For <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#ab1228769703a5a8403f80f34c4f96010" title="Walk to the goal position and orientation.">OpenHRP::AutoBalancerService::goPos()</a> and <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a69a486e3a60bfdeef6c53041f5d251a6" title="Set footsteps.">OpenHRP::AutoBalancerService::setFootSteps()</a>, this component stops to use it after completing walking command. After <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#ad76d7a7c8aff5c0fa95c16b267929bcd" title="Walk at the desired velocity.">OpenHRP::AutoBalancerService::goVelocity()</a> is called, this component continuously generates walking pattern. When <a class="el" href="../../d4/d5b/interfaceOpenHRP_1_1AutoBalancerService.html#a5b1b21542295ce1dc9dfc9493677cf79" title="Stop stepping.">OpenHRP::AutoBalancerService::goStop()</a> are called in this case, this completing stops to use it after completing walking command.</p>
 <table class="doxtable">
 <tr>
 <th>implementation_id</th><td>AutoBalancer </td></tr>
@@ -118,7 +131,7 @@ Configuration File</h2>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 1 2014 04:59:49 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 1 2014 06:09:27 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

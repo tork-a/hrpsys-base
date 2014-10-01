@@ -50,6 +50,12 @@
 <div class="textblock"><h2><a class="anchor" id="introduction"></a>
 Overview</h2>
 <p>This component reads sensors and write commands to actuators.</p>
+<h3><a class="anchor" id="hardware"></a>
+Hardware dependent parts and common parts</h3>
+<p>RobotHardware includes two parts: hardware dependent part as <a class="el" href="../../de/ddc/iob_8h.html">iob.h</a> and common part as RobotHardware. When developper want to apply hrpsys-base to new robots or simulators, write hardware dependent part as <a class="el" href="../../de/ddc/iob_8h.html">iob.h</a> and link it with common part RobotHardware.</p>
+<h3><a class="anchor" id="sensor"></a>
+Sensor data ports</h3>
+<p>Sensor data ports are based on VRML information and sensor values are assumed to be represented in the sensor local frames.</p>
 <table class="doxtable">
 <tr>
 <th>implementation_id</th><td>RobotHardware </td></tr>
@@ -79,11 +85,11 @@ Output Ports</h3>
 <tr>
 <td>emergencySignal</td><td>RTC::TimedLong</td><td>[rad]</td><td>Emergency signal </td></tr>
 <tr>
-<td>name of gyro defined in a VRML model</td><td>RTC::TimedAngularVelocity3D</td><td>[rad/s]</td><td>angular velocities </td></tr>
+<td>name of gyro defined in a VRML model, such as "gyrometer"</td><td>RTC::TimedAngularVelocity3D</td><td>[rad/s]</td><td>angular velocities in the sensor frame </td></tr>
 <tr>
-<td>name of accelerometer defined in a VRML model</td><td>RTC::TimedAcceleration3D</td><td>[rad/(s^2)]</td><td>acceleration </td></tr>
+<td>name of accelerometer defined in a VRML model, such as "gsensor"</td><td>RTC::TimedAcceleration3D</td><td>[rad/(s^2)]</td><td>acceleration in the sensor frame </td></tr>
 <tr>
-<td>name of force/torque sensor defined in a VRML model</td><td>RTC::TimedDoubleSeq</td><td>[N],[Nm]</td><td>force/torque </td></tr>
+<td>name of force/torque sensor defined in a VRML model, such as "rhsensor"</td><td>RTC::TimedDoubleSeq</td><td>[N],[Nm]</td><td>force/torque in the sensor frame </td></tr>
 </table>
 <h2><a class="anchor" id="serviceports"></a>
 Service Ports</h2>
@@ -126,7 +132,7 @@ Configuration File</h2>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 30 2014 00:46:43 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 1 2014 04:59:49 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

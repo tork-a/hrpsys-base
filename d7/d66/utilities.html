@@ -65,6 +65,11 @@ hrpsys-simulator</h2>
  -max-log-length length[s] set length of ring buffer<br/>
  -exit-on-finish exit this program when the simulation finishes</p>
 <p>Note:NameSever and openhrp-model-loader must be running</p>
+<p>In order to change timestep (ex 0.002), you need to change SampleRobot.conf to</p>
+<p>dt: 0.002</p>
+<p>and SampleRobot.xml to</p>
+<p>&lt;property name="SampleRobot(Robot)0.period" value="0.002"&gt; &lt;property name="timeStep" value="0.002"&gt;</p>
+<p>dt of SampleRobot.conf and XX.period of SampleRobot.xml should be same. timeStep of SampleRobot.xml is not larger than these values.</p>
 <h2><a class="anchor" id="hrpsys-simulator-jython"></a>
 hrpsys-simulator-jython</h2>
 <p>read a project file and execute simulation and a jython script</p>
@@ -124,7 +129,7 @@ Python bindings</h2>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 10 2014 15:14:38 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 10 2014 21:27:01 for Basic RT components and utilities by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
